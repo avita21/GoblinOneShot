@@ -14,20 +14,23 @@ html, body {
 
 .title {
 	margin: 0 auto;
-	font-family: 'Eater', 'Georgia', serif;
-    font-size: 30px;
+	font-family: 'Eater', 'Goblin One', 'Georgia', serif;
+    font-size: 4vw;
   	color: rgb(51, 0, 51);
     text-shadow: 3px 3px 5px rgb(255, 204, 255);
-    top:0;
-    text-align: center;
-    position: absolute;
+    top: 0;
     right: 50%;
+    text-align: center;
+    position: fixed;
     transform: translate(50%,0);
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.center {
+.title.center {
 	right: 50%;
     bottom: 50%;
+    font-size: 1em;
     transform: translate(50%,50%);
     position: absolute;
 }
