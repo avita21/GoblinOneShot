@@ -12,10 +12,9 @@ html, body {
 	background-attachment: fixed;
 }
 
-.kingdomtitle {
+.title {
 	margin: 0 auto;
-	font-family: "Kingc";
-    font-weight: bold;
+	font-family: 'Eater';
     font-size: 30px;
   	color: rgb(51, 0, 51);
     text-shadow: 3px 3px 5px rgb(255, 204, 255);
