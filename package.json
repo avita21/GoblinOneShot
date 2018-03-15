@@ -1,36 +1,16 @@
 {
-  "name": "goblinoneshot",
-  "version": "1.0.0",
-  "description": "You can use the [editor on GitHub](https://github.com/avita21/GoblinOneShot/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
-  "main": "phish.js",
-  "presets": [
-    "env"
-  ],
-  "scripts": {
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/avita21/GoblinOneShot.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/avita21/GoblinOneShot/issues"
-  },
-  "homepage": "https://github.com/avita21/GoblinOneShot#readme",
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "express": "^4.16.2"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.0.6",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "webpack-cli": "^2.0.11"
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
