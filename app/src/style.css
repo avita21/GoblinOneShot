@@ -1,0 +1,199 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	font-size:100%;
+}
+
+#background {
+	height: 100%;
+	background: url(./assets/parchment.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.title {
+	margin: 0 auto;
+	margin-bottom: 20px;
+	font-family: 'Eater', 'Goblin One', 'Georgia', serif;
+    font-size: 4vw;
+  	color: rgb(70, 20, 20);
+    text-shadow: 3px 3px 5px rgb(220, 112, 20);
+    top: 0;
+    right: 50%;
+    text-align: center;
+    position: fixed;
+    transform: translate(50%,0);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.toggle {
+	display: block;
+	margin: 10px auto 1.5em;
+}
+
+.container {
+	position: absolute;
+	margin: 0 auto;
+	margin-top: 4vw;
+	top: 5%;
+	transform: translate(0%, 5%);
+	width:  100vw;
+	overflow: auto;
+}
+
+.leftGoblin {
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+}
+
+.centerGoblin {
+	float: left;
+    width: 600px;
+    margin-left: 20px;
+}
+
+.rightGoblin {
+	float: left;
+    width: 300px;
+   	margin-left: 5px;
+}
+
+.overflow {
+	width: 100vw;
+	overflow: hidden;
+	display: flex;
+}
+
+.center {
+	margin: 0 auto;
+	right: 50%;
+    bottom: 50%;
+    position: absolute;
+    transform: translate(50%,50%);
+}
+
+
+.widget {
+	width: 300px;
+	height: 300px;
+}
+
+.bottom {
+	position: fixed;
+	bottom: 0;
+	height: 10vh;
+	width: 100vw;
+		/* FOR GRADIENT: */
+	background: linear-gradient(to top, 
+		rgba(255,255,255,1) 20%, rgba(255,255,255,0) 50%);
+}
+
+.bottom .left {
+	left: 0;
+}
+
+.bottom .right {
+	right: 0;
+}
+
+/* hide the scrollbar while still enabling scrolling */
+::-webkit-scrollbar { 
+    display: none;
+ /*   width: 0px; /*  remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+button,
+a.button {
+	font-size: 1.2em;
+	line-height: 1;
+	padding: .25em .5em;
+	border: none;
+	text-decoration: none;
+	color: #fff;
+	background: #333;
+	border-radius: 7px;
+	z-index:10;
+}
+
+button:hover,
+a.button:hover {
+	background-color: #111;
+}
+
+/* FOR DESKTOP: */
+@media screen and (min-device-width: 600px){ 
+	#narrative {
+		text-align: left;
+		font-size: 3vh;
+		left: 25vw;
+		top: 150px;
+		margin-right: 20vw;
+		padding-right: 5vw;
+	}
+
+	.bottom {
+		position: fixed;
+		bottom: 0;
+		height: 70vh;
+		width: 60vw;
+			/* FOR GRADIENT: */
+		/*background: linear-gradient(to top, 
+			rgba(255,255,255,1) 50%, rgba(255,255,255,0) 90*/	
+	}
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #000,
+      0px 0px 10px #000, 
+      0px 0px 25px #000,
+      0px 0px 25px #000,
+      0px 0px 25px #000,
+      0px 0px 25px #000,
+      0px 0px 25px #000,
+      0px 0px 25px #000,
+      0px 0px 50px #000,
+      0px 0px 50px #000,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+  *{
+      box-sizing: border-box;
+   }
+
+    code{
+      padding: 0 .25em;
+      color: #444;
+      font-size: .75em;
+      background: #eee;
+    }
+    
+    input, textarea, button{
+      margin-bottom: 1em;
+    }
+
+    #footer{
+      font-size: .75em;
+    }
+
+
+    #output{
+      padding: .5em;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      font-family: monospace;
+      font-size: 1em;
+    }
