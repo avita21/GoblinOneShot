@@ -1,16 +1,23 @@
 {
-  "name": "app",
+  "name": "goblin_one_shot",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+  	"start": "index.js"
+  },
+  "description": "You can use the [editor on GitHub](https://github.com/avita21/GoblinOneShot/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avita21/GoblinOneShot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avita21/GoblinOneShot/issues"
+  },
+  "homepage": "https://github.com/avita21/GoblinOneShot#readme"
 }
