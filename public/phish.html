@@ -1,0 +1,201 @@
+<!doctype HTML>
+<html>
+
+<head>
+	<title>Avita's Goblin One-Shot</title>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="easyzoom.css">
+	<link href='https://fonts.googleapis.com/css?family=Goblin One' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="easyzoom.js"></script>
+	<script src="phish.js" type="text/javascript"></script>
+	<script src="dice-roller.js"></script>
+	<script src="parallax.min.js"></script>
+	<script src="jquery.elevateZoom-3.0.8.min.js"></script>
+</head>
+
+<body>
+	<div id="background"/>
+	<div class="title">Avita's Goblin One Shot</div>
+		<div class="overflow">
+		<div class="container">
+		<div class="leftGoblin"><img src="assets/Goblin.png" width="400" height="700" alt="No goblin for you :("/>
+		</div>
+		<div class="centerGoblin">
+			<img id="sheet" src="assets/Phish/sheets/Phish_Goblin_Tiny.png" width="500" height="700" alt="No character for you :("
+			data-zoom-image="assets/Phish/sheets/Phish_Goblin.png"/>
+		</div>
+		<div class="rightGoblin">
+		<div class="widget">
+		  <header>
+		    <h1>RPG Dice Roller</h1>
+		  </header>
+
+		  <main>
+		  	<script>
+		  	    var diceRoller  = new DiceRoller();
+			    function roll(){
+			      var value = document.getElementById('input').value;
+
+			      diceRoller.roll(value);
+
+			      document.getElementById('output').value = diceRoller.getNotation();
+
+			      // stop event propagation
+			      return false;
+			    }
+
+			    function clearLog(){
+			      diceRoller.clearLog();
+
+			      document.getElementById('output').value = diceRoller.getNotation();
+
+			      // stop event propagation
+			      return false;
+			    }
+   		 	</script>
+		    <form action="" onsubmit="return roll();">
+		      <label for="input">Notation: </label>
+		      <input type="text" placeholder="eg. 1d6+2d20" autofocus id="input">
+		      <button type="submit">Roll</button>
+		    </form>
+
+		    <div>
+		      <label for="output">Output</label>
+
+		      <div>
+		        <textarea rows="1" id="output" readonly placeholder="No dice rolled"></textarea>
+		      </div>
+
+		      <button onclick="clearLog()">Clear log</button>
+		    </div>
+		    <hr>
+		    <textarea rows="4" cols="50">Current Hit Points: 20</textarea>
+		    <script type="text/javascript">
+		    	    // secret code:
+		    	 var codes_used = {};
+		    	 var charges = 2;
+			    function code() {
+			    	var value  = document.getElementById('SecretCode').value;
+			    	var images = document.querySelector(".images");
+			    	if (! (value in codes_used)) {
+				    	if (value == "bubbly fat") {
+				    	    var img = document.createElement("img");
+		   			    	img.src = "assets/Phish/class/NoHitPlez.png"
+		   			    	img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "dodge master") {
+				    	    var img = document.createElement("img");
+				    		img.src = "assets/Phish/class/PlzPlzNoHit.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "kamehameha") {
+				    	    var img = document.createElement("img");
+				    		img.src = "assets/Phish/class/GobbyPowerShot2.png"
+				    		img.style = "width: 100%";
+				    		img.addEventListener("click", () => {
+				    			if (confirm("Spend a charge?")) {
+				    				charges = Math.max(charges - 1, 0);
+					    			img.src = "assets/Phish/class/GobbyPowerShot" + 
+					    				String(charges) + ".png";
+				    			}
+							});
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "random teleport") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/CantTouchThis.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "watery ball") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/DrownInMyBall.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "scary phish") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/FerMe.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "icy tentacles") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/FrostMe.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "my leg") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/HittyFallyIce.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "f is for") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/LuvMeSomeFish.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "denied") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/OhNoYouDont.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "ripped my pants") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/PhishyStabStab.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "bad breath") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/RAWR.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "the power within") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/TakToMe.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} else if (value == "ocean man") {
+				    		var img = document.createElement("img");
+				    		img.src = "assets/Phish/spells/WateryCrash.png"
+				    		img.style = "width: 100%";
+				    	    images.appendChild(img);
+				    	    codes_used[value] = "used";
+				    	} 
+			        }
+			    	console.log("coded!");
+			    	return false; // stop event propagation
+			    }
+
+		    </script>
+		    <form action="" onsubmit="return code();">
+		    <label for="SecretCode">Secret Code: </label>
+		    <input type="text" name="Code" id="SecretCode">
+		    	<button type="submit">Go</button>
+		    </form>
+		    <img src="assets/Phish/goblin_blue.png"/ width="400" style="padding: 10px" title="Phish"/>
+		 </div>
+     	</div>
+	</div>
+</div>
+		<section>
+     	    <div class="bottom">
+     		<div class="images"/>
+     		</div>
+     	</section>
+</body>
+
+</html>

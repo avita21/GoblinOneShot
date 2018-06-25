@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-
+    "express": "latest",
+    "body-parser": "latest"
+  },
+  "engines": {
+    "node": "latest"
   },
   "scripts": {
-  	"start": "index.js"
+    "start": "index.js"
   },
   "description": "You can use the [editor on GitHub](https://github.com/avita21/GoblinOneShot/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
   "main": "index.js",
